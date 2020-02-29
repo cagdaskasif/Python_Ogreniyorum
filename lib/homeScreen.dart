@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dersler/anasayfa/kodla.dart';
+import 'dersler/giris/bolumler.dart';
 import 'kullanici_girisi.dart';
-import 'kurulum.dart';
-import 'oyunlarRadioButton.dart';
+import 'kurulum/kurulum.dart';
+import 'oyunlar/oyunlarRadioButton.dart';
 
 class homeScreen extends StatefulWidget {
   @override

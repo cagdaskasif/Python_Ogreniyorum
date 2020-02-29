@@ -8,8 +8,8 @@ class Kurulum extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 255, 235, 59),
       appBar: AppBar(
         title: Text(
-          ("Kurulum (Sayfa Deneme)"),
-          style: TextStyle(fontSize: 25),
+          ("Kurulum"),
+          style: TextStyle(fontSize: 30),
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
