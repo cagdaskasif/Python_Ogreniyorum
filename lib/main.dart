@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'homeScreen.dart';
 
 void main() => runApp(MyApp());
@@ -10,9 +11,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Python Öğren',
       theme: ThemeData(
-        backgroundColor: Color.fromARGB(255, 255, 235, 59),
-        textTheme: TextTheme(
-          body1: TextStyle(fontSize: 24, fontFamily: 'Consolas'),
+        textTheme: GoogleFonts.sourceCodeProTextTheme(
+          TextTheme(body1: TextStyle(fontSize: 20)),
         ),
       ),
       home: homeScreen(),

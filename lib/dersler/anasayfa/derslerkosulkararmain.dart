@@ -35,10 +35,11 @@ class MyApp4State extends State<MyApp4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 255, 235, 59),
       appBar: AppBar(
         title: Text(
           ("Koşul Karar Yapıları"),
-          style: TextStyle(fontSize: 25),
+          style: TextStyle(fontSize: 30),
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(

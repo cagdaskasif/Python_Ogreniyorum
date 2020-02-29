@@ -1,23 +1,39 @@
 import 'package:flutter/material.dart';
 
-
 class giris8 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 255, 235, 59),
-      body: Column(
-        children: <Widget>[
-          Container(
-            padding: EdgeInsets.all(25.0),
-            child: Text(
-              'Giriş 8',
-              style: TextStyle(
-                fontSize: 24.0,
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.all(20),
+              child: Text(
+                'Şimdi Sıra Sende\n\n   Aşağıdaki örnekleri etkileşimli kabuk (Python Shell-IDLE)  üzerinde'
+                ' çalıştırıp ekranda gördüğün sonuçları yorumlamalısın.\n\nBu etkinlikte ‘adım’ '
+                'değişkenine ismini yazmalısın. Çift tırnak “ ” kullanmayı unutma! ',
+                textAlign: TextAlign.justify,
               ),
             ),
-          ),
-        ],
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.all(10.0),
+                    margin: EdgeInsets.all(20),
+                    color: Colors.white,
+                    child: Text(
+                      ">>>  adım= “ ………..”\n>>> print ( “Merhaba, ” + adım )",
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
