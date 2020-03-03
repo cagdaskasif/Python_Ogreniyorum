@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 class homeScreen extends StatefulWidget {
   @override
   _homeScreenState createState() => _homeScreenState();
-
 }
 
 class _homeScreenState extends State<homeScreen> {
@@ -13,19 +12,14 @@ class _homeScreenState extends State<homeScreen> {
     Icons.extension,
     Icons.person,
     Icons.laptop_windows,
-
   ];
 
   @override
   Widget build(BuildContext context) {
-    double bosluk = 20.0;
-
-
+    double bosluk = 100;
 
     return Scaffold(
-
         backgroundColor: Color.fromARGB(255, 255, 235, 59),
-
         appBar: AppBar(
           title: Center(
             child: Text(
@@ -42,7 +36,6 @@ class _homeScreenState extends State<homeScreen> {
         ),
         body: OrientationBuilder(builder: (context, telyonu) {
           return telyonu == Orientation.portrait
-
               ? Center(
                   child: SingleChildScrollView(
                     child: Column(
@@ -101,19 +94,15 @@ class _homeScreenState extends State<homeScreen> {
   }
 
   Kutu(context, isim, link, iconNo) {
-
     return Column(
-
       children: <Widget>[
-
         Container(
-
           decoration: BoxDecoration(
               color: Color.fromARGB(255, 112, 112, 112),
               shape: BoxShape.circle),
-          width: (MediaQueryData.fromWindow(window).size.width) * 0.3,
+          width: (MediaQueryData.fromWindow(window).size.width) * 0.21,
           //width: MediaQuery.of(context).size.width;
-          height: (MediaQueryData.fromWindow(window).size.width) * 0.3,
+          height: (MediaQueryData.fromWindow(window).size.width) * 0.21,
           //color: Color(renk),
           child: Center(
             child: IconButton(
@@ -125,14 +114,14 @@ class _homeScreenState extends State<homeScreen> {
               onPressed: () {
                 Navigator.pushReplacementNamed(context, "$link");
               },
-              iconSize: MediaQueryData.fromWindow(window).size.width * 0.2,
+              iconSize: MediaQueryData.fromWindow(window).size.width * 0.15,
             ),
           ),
         ),
         Text(
           isim,
           style: TextStyle(
-              fontSize: MediaQueryData.fromWindow(window).size.width * 0.05),
+              fontSize: MediaQueryData.fromWindow(window).size.width * 0.045),
         )
       ],
     );
@@ -145,9 +134,9 @@ class _homeScreenState extends State<homeScreen> {
           decoration: BoxDecoration(
               color: Color.fromARGB(255, 112, 112, 112),
               shape: BoxShape.circle),
-          width: (MediaQueryData.fromWindow(window).size.height) * 0.25,
+          width: (MediaQueryData.fromWindow(window).size.height) * 0.21,
           //width: MediaQuery.of(context).size.width;
-          height: (MediaQueryData.fromWindow(window).size.height) * 0.25,
+          height: (MediaQueryData.fromWindow(window).size.height) * 0.21,
           //color: Color(renk),
           child: Center(
             child: IconButton(
@@ -166,7 +155,7 @@ class _homeScreenState extends State<homeScreen> {
         Text(
           isim,
           style: TextStyle(
-              fontSize: MediaQueryData.fromWindow(window).size.height * 0.05),
+              fontSize: MediaQueryData.fromWindow(window).size.height * 0.045),
         )
       ],
     );

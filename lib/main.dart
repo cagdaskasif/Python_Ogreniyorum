@@ -14,12 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-
-        '/home':(context)=>homeScreen(),
-        '/link1':(context)=>ogrenmeyebasla(),
-        '/link2':(context)=>OyunlarRadioButton(),
-        '/link3':(context)=>LoginPage2(),
-        '/link4':(context)=>Kurulum(),
+        '/home': (context) => homeScreen(),
+        '/link1': (context) => ogrenmeyebasla(),
+        '/link2': (context) => OyunlarRadioButton(),
+        '/link3': (context) => LoginPage2(),
+        '/link4': (context) => Kurulum(),
       },
       title: 'Python Öğren',
       theme: ThemeData(
