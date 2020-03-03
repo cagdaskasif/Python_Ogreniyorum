@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
+
+        '/home':(context)=>homeScreen(),
         '/link1':(context)=>ogrenmeyebasla(),
         '/link2':(context)=>OyunlarRadioButton(),
         '/link3':(context)=>LoginPage2(),
