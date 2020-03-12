@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dersler/giris/bolumler.dart';
+import 'dersler/bolumler_main/ana_basliklar.dart';
 import 'homeScreen.dart';
 import 'kullanici_girisi.dart';
 import 'kurulum/kurulum.dart';

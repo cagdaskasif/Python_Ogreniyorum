@@ -20,6 +20,7 @@ class _homeScreenState extends State<homeScreen> {
 
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 255, 235, 59),
+        
         appBar: AppBar(
           title: Center(
             child: Text(

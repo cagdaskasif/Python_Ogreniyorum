@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login/homeScreen.dart';
-import '../anasayfa/derslerdegiskenlermain.dart';
-import '../anasayfa/derslergirismain.dart';
-import '../anasayfa/derslerveritiplerimain.dart';
-import '../anasayfa/derslerkosulkararmain.dart';
-import '../anasayfa/derslerdongumain.dart';
+import 'degiskenler_main.dart';
+import 'giris_main.dart';
+import 'veritipleri_main.dart';
+import 'kosulkarar_main.dart';
+import 'dongu_main.dart';
 
 class ogrenmeyebasla extends StatefulWidget {
   @override
