@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login/b_cozelim/cozelim.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dersler/bolumler_main/ana_basliklar.dart';
+import 'a_ogren/0_bolumler_main/ana_basliklar_bolumler.dart';
 import 'homeScreen.dart';
-import 'kullanici_girisi.dart';
-import 'kurulum/kurulum.dart';
-import 'oyunlar/oyunlarRadioButton.dart';
+import 'c_profil/kullanici_girisi.dart';
+import 'd_kurulum/kurulum.dart';
+import 'b_cozelim/cozelim.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,17 +17,20 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => homeScreen(),
         '/link1': (context) => ogrenmeyebasla(),
-        '/link2': (context) => OyunlarRadioButton(),
+        '/link2': (context) => Cozelim(),
         '/link3': (context) => LoginPage2(),
         '/link4': (context) => Kurulum(),
       },
       title: 'Python Öğren',
       theme: ThemeData(
         textTheme: GoogleFonts.sourceCodeProTextTheme(
-          TextTheme(body1: TextStyle(fontSize: 20)),
+          TextTheme(
+           body1: TextStyle(fontSize: 16),
+            button: TextStyle(fontSize: 15),
+          ),
         ),
       ),
-      home: homeScreen(),
+      home: LoginPage2(),
     );
   }
 }

@@ -1,10 +1,12 @@
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class homeScreen extends StatefulWidget {
   @override
   _homeScreenState createState() => _homeScreenState();
 }
+
 
 class _homeScreenState extends State<homeScreen> {
   final List<IconData> iconData = <IconData>[
@@ -20,14 +22,12 @@ class _homeScreenState extends State<homeScreen> {
 
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 255, 235, 59),
-        
         appBar: AppBar(
-          title: Center(
-            child: Text(
-              ("Python Öğren"),
-              style: TextStyle(fontSize: 30),
-            ),
+          title: Text(
+            ("Python Öğren"),
+           // style: TextStyle(fontSize: 30),
           ),
+          centerTitle: true,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(
               bottom: Radius.circular(20),
