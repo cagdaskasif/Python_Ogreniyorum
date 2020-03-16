@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/b_cozelim/cozelim.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'a_ogren/0_bolumler_main/ana_basliklar_bolumler.dart';
+import 'a_ogren/ana_basliklar_bolumler.dart';
 import 'homeScreen.dart';
 import 'c_profil/kullanici_girisi.dart';
 import 'd_kurulum/kurulum.dart';
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.sourceCodeProTextTheme(
           TextTheme(
-           body1: TextStyle(fontSize: 16),
+            body1: TextStyle(fontSize: 16),
             button: TextStyle(fontSize: 15),
           ),
         ),

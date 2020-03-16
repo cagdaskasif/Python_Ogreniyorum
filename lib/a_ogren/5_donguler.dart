@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import '../5_donguler/dongu1.dart';
-import '../5_donguler/dongu2.dart';
-import '../5_donguler/dongu3.dart';
-import '../5_donguler/dongu4.dart';
-import '../5_donguler/dongu5.dart';
-import '../5_donguler/dongu6.dart';
-import '../5_donguler/dongu7.dart';
-import '../5_donguler/dongu8.dart';
-import '../5_donguler/dongu9.dart';
-import '../5_donguler/dongu10.dart';
+import '5_donguler/dongu1.dart';
+import '5_donguler/dongu2.dart';
+import '5_donguler/dongu3.dart';
+import '5_donguler/dongu4.dart';
+import '5_donguler/dongu5.dart';
+import '5_donguler/dongu6.dart';
+import '5_donguler/dongu7.dart';
+import '5_donguler/dongu8.dart';
+import '5_donguler/dongu9.dart';
+import '5_donguler/dongu10.dart';
 
 class MyApp5 extends StatefulWidget {
   @override
@@ -18,7 +18,16 @@ class MyApp5 extends StatefulWidget {
 }
 
 class MyApp5State extends State<MyApp5> {
-  int selectedPage = 0;
+  int selectedPage = 0, aa = 0;
+  PageController _pageController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _pageController = PageController();
+  }
+
   final _pageOptions = [
     dongu1(),
     dongu2(),
@@ -48,13 +57,35 @@ class MyApp5State extends State<MyApp5> {
         ),
         backgroundColor: Color.fromARGB(255, 112, 112, 112),
       ),
-      body: _pageOptions[selectedPage],
+      body: PageView(
+        controller: _pageController,
+        children: <Widget>[
+          _pageOptions[selectedPage],
+          dongu2(),
+          dongu3(),
+          dongu4(),
+          dongu5(),
+          dongu6(),
+          dongu7(),
+          dongu8(),
+          dongu9(),
+          dongu10(),
+        ],
+        onPageChanged: _pageChange,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedPage,
         onTap: (int index) {
-          setState(() {
-            selectedPage = index;
-          });
+          if (aa != index) {
+            setState(() {
+              selectedPage = index;
+              _pageController.jumpToPage(index);
+              aa = selectedPage;
+            });
+          } else {
+            debugPrint("*****$selectedPage******");
+            debugPrint("*---$aa---*");
+          }
         },
         items: [
           BottomNavigationBarItem(
@@ -101,5 +132,13 @@ class MyApp5State extends State<MyApp5> {
         ],
       ),
     );
+  }
+
+  _pageChange(int page) {
+    debugPrint(page.toString());
+    setState(() {
+      selectedPage = page;
+      aa = page;
+    });
   }
 }

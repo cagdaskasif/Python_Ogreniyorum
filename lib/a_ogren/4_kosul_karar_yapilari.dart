@@ -1,35 +1,44 @@
 import 'package:flutter/material.dart';
-import '../2_veri_tipleri/veri1.dart';
-import '../2_veri_tipleri/veri2.dart';
-import '../2_veri_tipleri/veri3.dart';
-import '../2_veri_tipleri/veri4.dart';
-import '../2_veri_tipleri/veri5.dart';
-import '../2_veri_tipleri/veri6.dart';
-import '../2_veri_tipleri/veri7.dart';
-import '../2_veri_tipleri/veri8.dart';
-import '../2_veri_tipleri/veri9.dart';
-import '../2_veri_tipleri/veri10.dart';
+import '4_kosul_karar_yapilari/kosul1.dart';
+import '4_kosul_karar_yapilari/kosul10.dart';
+import '4_kosul_karar_yapilari/kosul2.dart';
+import '4_kosul_karar_yapilari/kosul3.dart';
+import '4_kosul_karar_yapilari/kosul4.dart';
+import '4_kosul_karar_yapilari/kosul5.dart';
+import '4_kosul_karar_yapilari/kosul6.dart';
+import '4_kosul_karar_yapilari/kosul7.dart';
+import '4_kosul_karar_yapilari/kosul8.dart';
+import '4_kosul_karar_yapilari/kosul9.dart';
 
-class MyApp2 extends StatefulWidget {
+class MyApp4 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return MyApp2State();
+    return MyApp4State();
   }
 }
 
-class MyApp2State extends State<MyApp2> {
-  int selectedPage = 0;
+class MyApp4State extends State<MyApp4> {
+  int selectedPage = 0, aa = 0;
+  PageController _pageController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _pageController = PageController();
+  }
+
   final _pageOptions = [
-    veri1(),
-    veri2(),
-    veri3(),
-    veri4(),
-    veri5(),
-    veri6(),
-    veri7(),
-    veri8(),
-    veri9(),
-    veri10()
+    kosul1(),
+    kosul2(),
+    kosul3(),
+    kosul4(),
+    kosul5(),
+    kosul6(),
+    kosul7(),
+    kosul8(),
+    kosul9(),
+    kosul10()
   ];
 
   @override
@@ -38,7 +47,7 @@ class MyApp2State extends State<MyApp2> {
       backgroundColor: Color.fromARGB(255, 255, 235, 59),
       appBar: AppBar(
         title: Text(
-          ("Veri Tipleri"),
+          ("Koşul Karar Yapıları"),
           //style: TextStyle(fontSize: 30),
         ),
         shape: RoundedRectangleBorder(
@@ -48,13 +57,35 @@ class MyApp2State extends State<MyApp2> {
         ),
         backgroundColor: Color.fromARGB(255, 112, 112, 112),
       ),
-      body: _pageOptions[selectedPage],
+      body: PageView(
+        controller: _pageController,
+        children: <Widget>[
+          _pageOptions[selectedPage],
+          kosul2(),
+          kosul3(),
+          kosul4(),
+          kosul5(),
+          kosul6(),
+          kosul7(),
+          kosul8(),
+          kosul9(),
+          kosul10(),
+        ],
+        onPageChanged: _pageChange,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedPage,
         onTap: (int index) {
-          setState(() {
-            selectedPage = index;
-          });
+          if (aa != index) {
+            setState(() {
+              selectedPage = index;
+              _pageController.jumpToPage(index);
+              aa = selectedPage;
+            });
+          } else {
+            debugPrint("*****$selectedPage******");
+            debugPrint("*---$aa---*");
+          }
         },
         items: [
           BottomNavigationBarItem(
@@ -101,5 +132,13 @@ class MyApp2State extends State<MyApp2> {
         ],
       ),
     );
+  }
+
+  _pageChange(int page) {
+    debugPrint(page.toString());
+    setState(() {
+      selectedPage = page;
+      aa = page;
+    });
   }
 }

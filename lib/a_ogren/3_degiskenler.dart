@@ -1,43 +1,53 @@
 import 'package:flutter/material.dart';
-import '../1_giris/giris1.dart';
-import '../1_giris/giris2.dart';
-import '../1_giris/giris3.dart';
-import '../1_giris/giris4.dart';
-import '../1_giris/giris5.dart';
-import '../1_giris/giris6.dart';
-import '../1_giris/giris7.dart';
-import '../1_giris/giris8.dart';
-import '../1_giris/giris9.dart';
-import '../1_giris/giris10.dart';
+import '3_degiskenler/degisken1.dart';
+import '3_degiskenler/degisken2.dart';
+import '3_degiskenler/degisken3.dart';
+import '3_degiskenler/degisken4.dart';
+import '3_degiskenler/degisken5.dart';
+import '3_degiskenler/degisken6.dart';
+import '3_degiskenler/degisken7.dart';
+import '3_degiskenler/degisken8.dart';
+import '3_degiskenler/degisken9.dart';
+import '3_degiskenler/degisken10.dart';
 
-class MyApp1 extends StatefulWidget {
+class MyApp3 extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => MyApp1State();
+  State<StatefulWidget> createState() {
+    return MyApp3State();
+  }
 }
 
-class MyApp1State extends State<MyApp1> {
-  int selectedPage = 0;
+class MyApp3State extends State<MyApp3> {
+  int selectedPage = 0, aa = 0;
+  PageController _pageController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _pageController = PageController();
+  }
+
   final _pageOptions = [
-    giris1(),
-    giris2(),
-    giris3(),
-    giris4(),
-    giris5(),
-    giris6(),
-    giris7(),
-    giris8(),
-    giris9(),
-    giris10(),
+    degisken1(),
+    degisken2(),
+    degisken3(),
+    degisken4(),
+    degisken5(),
+    degisken6(),
+    degisken7(),
+    degisken8(),
+    degisken9(),
+    degisken10()
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Color.fromARGB(255, 255, 234, 184),  //burcu hocanın beğendiği
       backgroundColor: Color.fromARGB(255, 255, 235, 59),
       appBar: AppBar(
         title: Text(
-          ("Giriş"),
+          ("Değişkenler"),
           //style: TextStyle(fontSize: 30),
         ),
         shape: RoundedRectangleBorder(
@@ -47,13 +57,35 @@ class MyApp1State extends State<MyApp1> {
         ),
         backgroundColor: Color.fromARGB(255, 112, 112, 112),
       ),
-      body: _pageOptions[selectedPage],
+      body: PageView(
+        controller: _pageController,
+        children: <Widget>[
+          _pageOptions[selectedPage],
+          degisken2(),
+          degisken3(),
+          degisken4(),
+          degisken5(),
+          degisken6(),
+          degisken7(),
+          degisken8(),
+          degisken9(),
+          degisken10(),
+        ],
+        onPageChanged: _pageChange,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedPage,
         onTap: (int index) {
-          setState(() {
-            selectedPage = index;
-          });
+          if (aa != index) {
+            setState(() {
+              selectedPage = index;
+              _pageController.jumpToPage(index);
+              aa = selectedPage;
+            });
+          } else {
+            debugPrint("*****$selectedPage******");
+            debugPrint("*---$aa---*");
+          }
         },
         items: [
           BottomNavigationBarItem(
@@ -100,5 +132,13 @@ class MyApp1State extends State<MyApp1> {
         ],
       ),
     );
+  }
+
+  _pageChange(int page) {
+    debugPrint(page.toString());
+    setState(() {
+      selectedPage = page;
+      aa = page;
+    });
   }
 }

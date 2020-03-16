@@ -1,35 +1,44 @@
 import 'package:flutter/material.dart';
-import '../3_degiskenler/degisken1.dart';
-import '../3_degiskenler/degisken2.dart';
-import '../3_degiskenler/degisken3.dart';
-import '../3_degiskenler/degisken4.dart';
-import '../3_degiskenler/degisken5.dart';
-import '../3_degiskenler/degisken6.dart';
-import '../3_degiskenler/degisken7.dart';
-import '../3_degiskenler/degisken8.dart';
-import '../3_degiskenler/degisken9.dart';
-import '../3_degiskenler/degisken10.dart';
+import '2_veri_tipleri/veri1.dart';
+import '2_veri_tipleri/veri2.dart';
+import '2_veri_tipleri/veri3.dart';
+import '2_veri_tipleri/veri4.dart';
+import '2_veri_tipleri/veri5.dart';
+import '2_veri_tipleri/veri6.dart';
+import '2_veri_tipleri/veri7.dart';
+import '2_veri_tipleri/veri8.dart';
+import '2_veri_tipleri/veri9.dart';
+import '2_veri_tipleri/veri10.dart';
 
-class MyApp3 extends StatefulWidget {
+class MyApp2 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return MyApp3State();
+    return MyApp2State();
   }
 }
 
-class MyApp3State extends State<MyApp3> {
-  int selectedPage = 0;
+class MyApp2State extends State<MyApp2> {
+  int selectedPage = 0, aa = 0;
+  PageController _pageController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _pageController = PageController();
+  }
+
   final _pageOptions = [
-    degisken1(),
-    degisken2(),
-    degisken3(),
-    degisken4(),
-    degisken5(),
-    degisken6(),
-    degisken7(),
-    degisken8(),
-    degisken9(),
-    degisken10()
+    veri1(),
+    veri2(),
+    veri3(),
+    veri4(),
+    veri5(),
+    veri6(),
+    veri7(),
+    veri8(),
+    veri9(),
+    veri10()
   ];
 
   @override
@@ -38,7 +47,7 @@ class MyApp3State extends State<MyApp3> {
       backgroundColor: Color.fromARGB(255, 255, 235, 59),
       appBar: AppBar(
         title: Text(
-          ("Değişkenler"),
+          ("Veri Tipleri"),
           //style: TextStyle(fontSize: 30),
         ),
         shape: RoundedRectangleBorder(
@@ -48,13 +57,35 @@ class MyApp3State extends State<MyApp3> {
         ),
         backgroundColor: Color.fromARGB(255, 112, 112, 112),
       ),
-      body: _pageOptions[selectedPage],
+      body: PageView(
+        controller: _pageController,
+        children: <Widget>[
+          _pageOptions[selectedPage],
+          veri2(),
+          veri3(),
+          veri4(),
+          veri5(),
+          veri6(),
+          veri7(),
+          veri8(),
+          veri9(),
+          veri10(),
+        ],
+        onPageChanged: _pageChange,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedPage,
         onTap: (int index) {
-          setState(() {
-            selectedPage = index;
-          });
+          if (aa != index) {
+            setState(() {
+              selectedPage = index;
+              _pageController.jumpToPage(index);
+              aa = selectedPage;
+            });
+          } else {
+            debugPrint("*****$selectedPage******");
+            debugPrint("*---$aa---*");
+          }
         },
         items: [
           BottomNavigationBarItem(
@@ -101,5 +132,13 @@ class MyApp3State extends State<MyApp3> {
         ],
       ),
     );
+  }
+
+  _pageChange(int page) {
+    debugPrint(page.toString());
+    setState(() {
+      selectedPage = page;
+      aa = page;
+    });
   }
 }
