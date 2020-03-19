@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login/b_cozelim/cozelim.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'a_ogren/ana_basliklar_bolumler.dart';
-import 'homeScreen.dart';
 import 'c_profil/kullanici_girisi.dart';
 import 'd_kurulum/kurulum.dart';
 import 'b_cozelim/cozelim.dart';
@@ -15,7 +14,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/home': (context) => homeScreen(),
         '/link1': (context) => ogrenmeyebasla(),
         '/link2': (context) => Cozelim(),
         '/link3': (context) => LoginPage2(),

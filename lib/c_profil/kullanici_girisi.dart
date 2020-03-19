@@ -97,11 +97,6 @@ class _LoginPage2State extends State<LoginPage2> {
 
   Widget _buildBar(BuildContext context) {
     return new AppBar(
-      leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pushReplacementNamed(context, "/home");
-          }),
       title: new Text("Python Öğren"),
       centerTitle: true,
       shape: RoundedRectangleBorder(
@@ -212,7 +207,7 @@ class _LoginPage2State extends State<LoginPage2> {
         .signInWithEmailAndPassword(email: mail, password: sifre)
         .then((oturumAcmisKullanici) {
       if (oturumAcmisKullanici.user.isEmailVerified) {
-        Navigator.push(
+        Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => homeScreen()));
         mesaj = "\nEmail onaylı kullanıcı yönlendirme yapabilirsin";
       } else {

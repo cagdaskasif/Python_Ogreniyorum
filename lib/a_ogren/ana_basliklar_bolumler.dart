@@ -16,11 +16,6 @@ class _ogrenmeyebaslaState extends State<ogrenmeyebasla> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 255, 235, 59),
       appBar: AppBar(
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.pushReplacementNamed(context, "/home");
-            }),
         title: Text(
           ("Bölümler"),
           //style: TextStyle(fontSize: 30),

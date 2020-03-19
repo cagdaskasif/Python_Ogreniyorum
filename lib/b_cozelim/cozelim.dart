@@ -7,14 +7,13 @@ class Cozelim extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 255, 235, 59),
       appBar: AppBar(
-        leading: IconButton(
+        /* leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.pushReplacementNamed(context, "/home");
-            }),
-        title:  Text(
-            ("Çözelim"),
-            //style: TextStyle(fontSize: 25),
+            }),*/
+        title: Text(
+          ("Çözelim"),
         ),
         centerTitle: true,
         shape: RoundedRectangleBorder(
@@ -45,7 +44,6 @@ class Cozelim extends StatelessWidget {
                   Text(
                     ("3+4"),
                   ),
-
                 ],
               ),
               decoration: BoxDecoration(

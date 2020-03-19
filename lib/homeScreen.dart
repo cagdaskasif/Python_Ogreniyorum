@@ -7,7 +7,6 @@ class homeScreen extends StatefulWidget {
   _homeScreenState createState() => _homeScreenState();
 }
 
-
 class _homeScreenState extends State<homeScreen> {
   final List<IconData> iconData = <IconData>[
     Icons.school,
@@ -25,7 +24,7 @@ class _homeScreenState extends State<homeScreen> {
         appBar: AppBar(
           title: Text(
             ("Python Öğren"),
-           // style: TextStyle(fontSize: 30),
+            // style: TextStyle(fontSize: 30),
           ),
           centerTitle: true,
           shape: RoundedRectangleBorder(
@@ -113,7 +112,7 @@ class _homeScreenState extends State<homeScreen> {
                 color: Color.fromARGB(255, 255, 235, 59),
               ),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, "$link");
+                Navigator.pushNamed(context, "$link");
               },
               iconSize: MediaQueryData.fromWindow(window).size.width * 0.15,
             ),
@@ -147,7 +146,7 @@ class _homeScreenState extends State<homeScreen> {
                 color: Color.fromARGB(255, 255, 235, 59),
               ),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, "$link");
+                Navigator.pushNamed(context, "$link");
               },
               iconSize: MediaQueryData.fromWindow(window).size.height * 0.15,
             ),
@@ -162,3 +161,83 @@ class _homeScreenState extends State<homeScreen> {
     );
   }
 }
+
+/*class _homeScreenState extends State<homeScreen> {
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Color.fromARGB(255, 255, 235, 59),
+        appBar: AppBar(
+          title: Text(
+            ("Python Öğren"),
+            // style: TextStyle(fontSize: 30),
+          ),
+          centerTitle: true,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(20),
+            ),
+          ),
+          backgroundColor: Color.fromARGB(255, 112, 112, 112),
+        ),
+        body: OrientationBuilder(builder: (context, telyonu) {
+          return telyonu == Orientation.portrait
+              ? Center(
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Kutu(context, "Kodla", "/link1", 0),
+                      SizedBox(width: bosluk),
+                      Kutu(context, "Çözelim", "/link2", 1),
+                    ],
+                  ),
+                  SizedBox(height: bosluk),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Kutu(context, "Profil", "/link3", 2),
+                      SizedBox(width: bosluk),
+                      Kutu(context, "Kurulum", "/link4", 3),
+                    ],
+                  ),
+                  SizedBox(height: bosluk),
+                ],
+              ),
+            ),
+          )
+              : Center(
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Kutu2(context, "Kodla", "/link1", 0),
+                      SizedBox(width: bosluk),
+                      Kutu2(context, "Çözelim", "/link2", 1),
+                    ],
+                  ),
+                  SizedBox(height: bosluk),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Kutu2(context, "Profil", "/link3", 2),
+                      SizedBox(width: bosluk),
+                      Kutu2(context, "Kurulum", "/link4", 3),
+                    ],
+                  ),
+                  SizedBox(height: bosluk),
+                ],
+              ),
+            ),
+          );
+        }));
+  }
+  }*/
