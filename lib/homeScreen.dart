@@ -156,7 +156,7 @@ class _homeScreenState extends State<homeScreen> {
           isim,
           style: TextStyle(
               fontSize: MediaQueryData.fromWindow(window).size.height * 0.045),
-        )
+        ),
       ],
     );
   }
