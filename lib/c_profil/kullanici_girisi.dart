@@ -248,7 +248,7 @@ class _LoginPage2State extends State<LoginPage2> {
           "Uid ${firebaseUser.user.uid} mail : ${firebaseUser.user.email} mailOnayı : ${firebaseUser.user.isEmailVerified} ");
     } else {
       setState(() {
-        mesaj = "Yanlış veri girişi";
+        mesaj = "Yanlış veri girişi"; 
       });
     }
     //  _keyForm.currentState.reset();
