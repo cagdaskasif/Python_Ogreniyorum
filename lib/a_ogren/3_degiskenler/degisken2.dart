@@ -8,7 +8,7 @@ class degisken2 extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'Basit Dört İşlem',
+              'Aşağıda 3 değişkene de tek satırda 1 değeri atanmıştır.',
               textAlign: TextAlign.start,
             ),
           ),
@@ -21,7 +21,8 @@ class degisken2 extends StatelessWidget {
                   margin: EdgeInsets.all(20),
                   color: Colors.white,
                   child: Text(
-                    ">>> 4+2\n6\n>>> 4-2\n2\n>>> 4*2\n8\n>>> 4/2\n2.0",
+                    "a = b = c = 1\nprint ('1. sayı=', a)\nprint ('2. sayı=', b)\nprint ('3. sayı=', c)\n1. sayı= 1\n2. sayı= 1\n"
+                        "3. sayı= 1",
                   ),
                 ),
               ),
@@ -30,8 +31,7 @@ class degisken2 extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'İPUCU: Bu örnekte Python Shell üzerinde basit dört '
-                  'işlem örneği yaptık. Bu işlemlerde ( +, -, *, /) operatörlerini kullandık.',
+              '',
               textAlign: TextAlign.justify,
               style: TextStyle(color: Colors.blueGrey.shade700),
             ),

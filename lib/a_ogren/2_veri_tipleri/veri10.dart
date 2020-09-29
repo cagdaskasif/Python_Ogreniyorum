@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class veri10 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,15 +10,7 @@ class veri10 extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'KONTEYNIR',
-              textAlign: TextAlign.justify,
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.all(20),
-            child: Text(
-              'BLUEGREY',
-              style: TextStyle(color: Colors.blueGrey.shade700),
+              'Boolean veri tipini sayısal veri tipine ve string veri tipine dönüştürebilirsiniz. Bu işlemin tersini de yapabilirsiniz.',
               textAlign: TextAlign.justify,
             ),
           ),
@@ -30,7 +23,11 @@ class veri10 extends StatelessWidget {
                   margin: EdgeInsets.all(20),
                   color: Colors.white,
                   child: Text(
-                    "BEYAZKONTEYNIR",
+                    "askerlikYaptiMi=True\nprint('Askerlik yaptı mı?', askerlikYaptiMi)"
+                    "\naskerlikYaptiMiInt=int(askerlikYaptiMi) #integer tipine dönüştürüldü."
+                    "\nprint('Askerlik yaptı mı?', askerlikYaptiMiInt)\naskerlikYaptiMiStr=str(askerlikYaptiMi) #string tipine "
+                    "dönüştürüldü. \nprint('Askerlik yaptı mı?', askerlikYaptiMiStr)\n#Çıktı olarak True verir ancak bu boolean"
+                    "tipinde değildir.\nAskerlik yaptı mı? True\nAskerlik yaptı mı? 1\nAskerlik yaptı mı? True",
                   ),
                 ),
               ),

@@ -9,33 +9,22 @@ class veri4 extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'KONTEYNIR',
-              textAlign: TextAlign.justify,
+              'Sayısal (int, float ve complex) Veri Tipleri',
+              textAlign: TextAlign.center,
             ),
           ),
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'BLUEGREY',
+              '“int” veri tipi Python’da tam sayıların tutulduğu veri tipidir: 3, 5, 198763 gibi değerleri tutar. En çok'
+                  ' kullanılan veri tiplerinden biridir.\n\n“float” veri tipi ondalıklı sayıların tutulduğu veri tipidir: 0.5, 234678.67 '
+                  'gibi değerleri tutar.\n\n“complex” veri tipi ise karmaşık sayıların tutulduğu veri tipidir. A+Bj tipinde veriler '
+                  'tutulur: 4+5j gibi değerleri tutar.',
               style: TextStyle(color: Colors.blueGrey.shade700),
               textAlign: TextAlign.justify,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Expanded(
-                child: Container(
-                  padding: EdgeInsets.all(10.0),
-                  margin: EdgeInsets.all(20),
-                  color: Colors.white,
-                  child: Text(
-                    "BEYAZKONTEYNIR",
-                  ),
-                ),
-              ),
-            ],
-          ),
+
         ],
       ),
     );

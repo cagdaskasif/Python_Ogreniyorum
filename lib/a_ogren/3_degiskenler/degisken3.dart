@@ -4,22 +4,16 @@ class degisken3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
             margin: EdgeInsets.all(20),
-            child: Column(
-              children: <Widget>[
-                Text(
-                  'Merhaba Dünya\n\n    Ekrana “Merhaba Dünya” yazdıralım. Bunun '
-                      'için ‘print’ komutunu kullanalım.',
-                  // style: TextStyle(fontSize: 24),
-                  textAlign: TextAlign.justify,
-                ),
-              ],
+            child: Text(
+              'Değişkenler aralarına virgül eklenerek yan yana yazılır. Değerleri de aynı sıralama ile karşılarına yazılır.',
+              textAlign: TextAlign.start,
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Expanded(
                 child: Container(
@@ -27,7 +21,8 @@ class degisken3 extends StatelessWidget {
                   margin: EdgeInsets.all(20),
                   color: Colors.white,
                   child: Text(
-                    ">>>print (“Merhaba Dünya”)\nMerhaba Dünya\n>>>",
+                    "adi, soyadi, yasi='Canan', 'DAĞDEVİREN', 34\nprint (“Adı=”, adi)\nprint (“Soyadı=”, soyadi,)"
+                        "\nprint (“Yaşı=”, yasi)\nAdı= Canan\nSoyadı= DAĞDEVİREN\nYaşı= 34",
                   ),
                 ),
               ),
@@ -36,10 +31,9 @@ class degisken3 extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'İPUCU: ‘print’ komutu kullanarak parantezin içindeki ifadeyi ekrana'
-                  ' değiştirmeden, birebir yazdırmak istedik. Bu nedenle çift tırnak “” kullandık.',
-              style: TextStyle(color: Colors.blueGrey.shade700),
+              '',
               textAlign: TextAlign.justify,
+              style: TextStyle(color: Colors.blueGrey.shade700),
             ),
           ),
         ],

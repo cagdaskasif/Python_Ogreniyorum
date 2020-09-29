@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-
-//bu sayfa aslında giriş2 sayfası
-
-
 class veri1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,20 +8,42 @@ class veri1 extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'Algoritma Nedir?\n\n   Algoritmalar programlama sürecindeki işlemleri gösteren, programın '
-                  'doğru sonuca ulaşması için gerekli olan yoldur. Algoritma, başla ve bitir '
-                  'komutları arasına yazılan, birçok adımdan oluşan, mantıksal bir sıralama izleyen '
-                  'problem çözme sürecidir.\n\n   Programlama için algoritma en önemli basamaklardan biridir.'
-                  ' Ancak algoritmanın bizi doğru sonuca götürmesi için de problemin çok iyi analiz edilmesi,'
-                  ' yapılacak işlemlerin ayrıntılı bir şekilde belirtilmesi önemlidir.',
+              '   Veri tiplerini anlayabilmek için aşağıdaki kod satırı incelenebilir. Aşağıda bir sayı ile bir karakter dizisi '
+                  'üzerinde operatörleri kullanarak işlemler yapılmıştır.\n\n\n     Hatalı veri tipi kullanımına örnek: “sayi2” değişkeninin tek tırnak içinde verildiğine ve bir karakter dizisi'
+                  'olduğuna dikkat edilmelidir.',
               textAlign: TextAlign.justify,
-
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.all(10.0),
+                  margin: EdgeInsets.all(20),
+                  color: Colors.white,
+                  child: Text(
+                    "sayi1=5\nsayi2='3'\nprint (sayi1+sayi2)\nTypeError Traceback (most recent call last)\n"
+                        "<ipython-input-55-294ee141ba94> in <module>()\n1 sayi1=5\n2 sayi2='3'\n ----> 3 print (sayi1+sayi2)\n"
+                        "TypeError: unsupported operand type(s) for +: 'int' and 'str'",
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Container(
+            margin: EdgeInsets.all(20),
+            child: Text(
+              '     Kod çalıştırıldığında bir hata mesajı alınır. Bir aritmetik operatörü kullanılırken bir sayı ile bir karakter '
+                  'dizisi (ikinci değişkenin adı sizi yanıltmasın) toplamaya çalışıldığı için Python hata verir. '
+                  'Veri tipleri, değişkenler üzerinde yapılabilecek işlemleri belirler.',
+              textAlign: TextAlign.justify,
             ),
           ),
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'Problem -> Algoritma Tasarımı -> Problemin Çözümü',
+              '',
               style: TextStyle(color: Colors.blueGrey.shade700),
               textAlign: TextAlign.justify,
             ),

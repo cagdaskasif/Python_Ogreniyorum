@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/b_cozelim/cozelim.dart';
+import 'package:flutter_login/homeScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'a_ogren/ana_basliklar_bolumler.dart';
 import 'c_profil/kullanici_girisi.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: LoginPage2(),
+      home: homeScreen(),
     );
   }
 }

@@ -12,8 +12,9 @@ class degisken1 extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Text(
-                  'Merhaba Dünya\n\n    Ekrana “Merhaba Dünya” yazdıralım. Bunun '
-                      'için ‘print’ komutunu kullanalım.',
+                  'Kod yazarken sadece sabit değerler üzerinden işlemler yapılmaz. Kullanıcıdan veya başka kaynaklardan'
+                      ' veri alınması gerekir.',
+
                   // style: TextStyle(fontSize: 24),
                   textAlign: TextAlign.justify,
                 ),
@@ -28,7 +29,10 @@ class degisken1 extends StatelessWidget {
                   margin: EdgeInsets.all(20),
                   color: Colors.white,
                   child: Text(
-                    ">>>print (“Merhaba Dünya”)\nMerhaba Dünya\n>>>",
+                    "#sayi1 değişkenine 5 sayısı atandı.\nsayi1=5\nprint('Değişkenin içindeki sayı: ', sayi1)\nsayi1=10"
+    "\nprint('Değişkenin içindeki sayı: ', sayi1, 'oldu')\nsayi1='Murat'\nprint ('Değişkenin içindeki değer: ', sayi1, 'oldu')\n"
+    "sayi1=10.5\nprint ('Değişkenin içindeki sayı: ', sayi1, 'oldu')\nDeğişkenin içindeki sayı: 5\nDeğişkenin içindeki sayı: 10 oldu\n"
+                        "Değişkenin içindeki değer: Murat oldu\nDeğişkenin içindeki sayı: 10.5 oldu",
                   ),
                 ),
               ),
@@ -37,8 +41,7 @@ class degisken1 extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'İPUCU: ‘print’ komutu kullanarak parantezin içindeki ifadeyi ekrana'
-                  ' değiştirmeden, birebir yazdırmak istedik. Bu nedenle çift tırnak “” kullandık.',
+              '',
               style: TextStyle(color: Colors.blueGrey.shade700),
               textAlign: TextAlign.justify,
             ),

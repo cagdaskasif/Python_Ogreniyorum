@@ -8,9 +8,7 @@ class veri2 extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'Şimdi Sıra Sende\n\n   Aşağıdaki örnekleri etkileşimli kabuk (Python Shell-IDLE)  üzerinde'
-                  ' çalıştırıp ekranda gördüğün sonuçları yorumlamalısın.\n\nBu etkinlikte ‘adım’ '
-                  'değişkenine ismini yazmalısın. Çift tırnak “ ” kullanmayı unutma! ',
+              '   Operatörler konusunda * operatörü ile ilgili bir ayrıntıdan bahsedilmiştir.',
               textAlign: TextAlign.justify,
             ),
           ),
@@ -23,11 +21,28 @@ class veri2 extends StatelessWidget {
                   margin: EdgeInsets.all(20),
                   color: Colors.white,
                   child: Text(
-                    ">>>  adım= “ ………..”\n>>> print ( “Merhaba, ” + adım )",
+                    "sayi1=5\nsayi2='3'\n#sayi2 değişkenin tek tırnak içinde verildiğinde bir karakter dizisi olduğuna dikkat ediniz."
+                        "\nprint (sayi1*sayi2)\n#Sizce nasıl bir sonuç çıkar?\n33333",
                   ),
                 ),
               ),
             ],
+          ),
+          Container(
+            margin: EdgeInsets.all(20),
+            child: Text(
+              '     Örnekte görüldüğü gibi kod “çarpma” işlemi yapamamıştır. Çünkü ortada iki sayısal değer yoktur. '
+                  'İkinci örnekte 3 sayısını bir karakter olarak 5 defa yazmıştır.',
+              textAlign: TextAlign.justify,
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(20),
+            child: Text(
+              '',
+              style: TextStyle(color: Colors.blueGrey.shade700),
+              textAlign: TextAlign.justify,
+            ),
           ),
         ],
       ),
