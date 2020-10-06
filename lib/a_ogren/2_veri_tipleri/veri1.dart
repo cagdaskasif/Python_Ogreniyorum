@@ -23,9 +23,15 @@ class veri1 extends StatelessWidget {
                   margin: EdgeInsets.all(20),
                   color: Colors.white,
                   child: Text(
-                    "sayi1=5\nsayi2='3'\nprint (sayi1+sayi2)\nTypeError Traceback (most recent call last)\n"
-                        "<ipython-input-55-294ee141ba94> in <module>()\n1 sayi1=5\n2 sayi2='3'\n ----> 3 print (sayi1+sayi2)\n"
-                        "TypeError: unsupported operand type(s) for +: 'int' and 'str'",
+                    "sayi1=5"
+                        "\nsayi2='3'"
+                        "\nprint (sayi1+sayi2)"
+                        "\nTypeError           Traceback (most recent call last)"
+                        "\n<ipython-input-55-294ee141ba94> in <module>()"
+                        "\n       1 sayi1=5"
+                        "\n       2 sayi2='3'"
+                        "\n ----> 3 print (sayi1+sayi2)"
+                        "\nTypeError: unsupported operand type(s) for +: 'int' and 'str'",
                   ),
                 ),
               ),
@@ -40,14 +46,7 @@ class veri1 extends StatelessWidget {
               textAlign: TextAlign.justify,
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(20),
-            child: Text(
-              '',
-              style: TextStyle(color: Colors.blueGrey.shade700),
-              textAlign: TextAlign.justify,
-            ),
-          ),
+
         ],
       ),
     );

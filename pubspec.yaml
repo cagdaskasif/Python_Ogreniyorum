@@ -47,6 +47,10 @@ flutter:
   assets:
     - assets/images/MEB.png
     - assets/images/kullanilanVeriTipleri.png
+    - assets/images/kosulluIfadeler.png
+    - assets/images/kosul.png
+    - assets/images/donguler.png
+    - assets/images/forDongusu.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

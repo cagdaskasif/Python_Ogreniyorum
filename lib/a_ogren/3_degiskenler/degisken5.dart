@@ -9,7 +9,7 @@ class degisken5 extends StatelessWidget {
             margin: EdgeInsets.all(20),
             child: Text(
               'Değişkenler veri tiplerine göre kullanılmazsa Python hata verir.',
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.start,
             ),
           ),
           Row(
@@ -21,10 +21,16 @@ class degisken5 extends StatelessWidget {
                   margin: EdgeInsets.all(20),
                   color: Colors.white,
                   child: Text(
-                    "sayi1=1\nmetin1='deneme'\nprint(sayi1+metin1) #Bir sayı ile bir metin, kelime toplanamaz.\n-------------------------"
-                        "-----------\nTypeError Traceback (most recent call last)\n<ipython-input-47-e585c633881d> "
-                        "in <module>()\n1 sayi1=1\n2 metin1='deneme'\n----> 3 print(sayi1+metin1) #Bir sayı ile bir metin, kelime toplanamaz.\nTypeError: "
-                        "unsupported operand type(s) for +: 'int' and 'str'",
+                    "sayi1=1"
+                        "\nmetin1='deneme'"
+                        "\nprint(sayi1+metin1) #Bir sayı ile bir metin, kelime toplanamaz."
+                        "\n------------------------------------"
+                        "\nTypeError      Traceback (most recent call last)"
+                        "\n<ipython-input-47-e585c633881d> in <module>()"
+                        "\n       1 sayi1=1"
+                        "\n       2 metin1='deneme'"
+                        "\n-----> 3 print(sayi1+metin1) #Bir sayı ile bir metin, kelime toplanamaz."
+                        "\n\nTypeError: unsupported operand type(s) for +: 'int' and 'str'",
                   ),
                 ),
               ),

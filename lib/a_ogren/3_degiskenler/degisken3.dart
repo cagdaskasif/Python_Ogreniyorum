@@ -21,8 +21,13 @@ class degisken3 extends StatelessWidget {
                   margin: EdgeInsets.all(20),
                   color: Colors.white,
                   child: Text(
-                    "adi, soyadi, yasi='Canan', 'DAĞDEVİREN', 34\nprint (“Adı=”, adi)\nprint (“Soyadı=”, soyadi,)"
-                        "\nprint (“Yaşı=”, yasi)\nAdı= Canan\nSoyadı= DAĞDEVİREN\nYaşı= 34",
+                    "adi, soyadi, yasi='Canan', 'DAĞDEVİREN', 34"
+                        "\nprint (“Adı=”, adi)"
+                        "\nprint (“Soyadı=”, soyadi,)"
+                        "\nprint (“Yaşı=”, yasi)" // “”
+                        "\nAdı= Canan"
+                        "\nSoyadı= DAĞDEVİREN"
+                        "\nYaşı= 34",
                   ),
                 ),
               ),

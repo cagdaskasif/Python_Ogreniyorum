@@ -13,7 +13,7 @@ class degisken9 extends StatelessWidget {
                 Text(
                   'Python’da hatalı değişken adı kullanımı örneği:',
                   // style: TextStyle(fontSize: 24),
-                  textAlign: TextAlign.justify,
+                  textAlign: TextAlign.start,
                 ),
               ],
             ),
@@ -25,8 +25,12 @@ class degisken9 extends StatelessWidget {
                   padding: EdgeInsets.all(10.0),
                   margin: EdgeInsets.all(20),
                   color: Colors.white,
-                  child: Text('1sayi=5 #Hatalı değişken adı.\nprint (1.sayi)\n  File "<ipython-input-52-a0b35430cdb5>", line 1\n'
-                      '1sayi=5 #Hatalı değişken adı.\n^\nSyntaxError: invalid syntax',
+                  child: Text('1sayi=5 #Hatalı değişken adı.'
+                      '\nprint (1.sayi)'
+                      '\n  File "<ipython-input-52-a0b35430cdb5>", line 1'
+                      '\n    1sayi=5 #Hatalı değişken adı.'
+                      '\n        ^'
+                      '\n\nSyntaxError: invalid syntax',
                   ),
                 ),
               ),

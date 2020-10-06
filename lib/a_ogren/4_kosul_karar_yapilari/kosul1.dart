@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class kosul1 extends StatelessWidget {
@@ -9,40 +11,31 @@ class kosul1 extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'Print Komutu ve Dört İşlemi Birlikte Kullanalım',
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Expanded(
-                child: Container(
-                  padding: EdgeInsets.all(10.0),
-                  margin: EdgeInsets.all(20),
-                  color: Colors.white,
-                  child: Text(
-                    ">>> a=2\n>>> b=4\n>>> c=a+b\n>>> print(c)\n6",
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Container(
-            margin: EdgeInsets.all(20),
-            child: Text(
-              '    Örneğimizde (a,b ve c) değişkenlerini kullandık. Bu değişkenlere değerler '
-                  'atadık. ‘Print’ komutu ile de ‘c’ değişkeninin alacağı değeri ekranda yazdırdık.',
+              '     Mantıksal operatörler sonuç olarak “boolean” veri tipinde değer verir. Eğer koşul sağlanırsa “True” '
+                  'değeri döndürürken koşul sağlanmazsa “False” değeri döndürür. “Boolean” veri tipi bu iki değerden başka bir değer'
+                  ' alamaz. Bu durum koşullu ifadeler üretme olanağı sağlar. Koşullu ifadelerin sonucu “boolean” değer kontrol '
+                  'edilerek program akışı yönlendirilebilir. Koşul ifadesi ve “True-False” akışı şekilde daha iyi görülebilir.',
               textAlign: TextAlign.justify,
             ),
           ),
           Container(
+            width: (MediaQueryData.fromWindow(window).size.width) * 0.80,
+            child: Column(
+              children: <Widget>[
+                Container(
+                  child: Image.asset(
+                    "assets/images/kosulluIfadeler.png",
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'İPUCU: Burada ekrana ‘c’ değişkeninin alacağı değeri yazdırmak istiyoruz. '
-                  'Dolayısıyla ‘c’ yazmasını istemiyoruz. Bu nedenle parantez içine yazarken ‘c’ '
-                  '‘yi çift tırnak “ ” içinde yazmamalıyız.',
-              style: TextStyle(color: Colors.blueGrey.shade700),
+              '     Şekilde görüldüğü üzere kullanıcıdan alınan veri “Şart 1” yapısına geldiğinde şartı sağlıyorsa (True) bu kod girintisi '
+    '(blok) içindeki komutlar çalışır. “Şart 1” yapısında şart sağlanmıyorsa “blok” atlanarak sonraki kodlara geçilir. Sonrasında yeni '
+                  'şart yapısı (Şart 2) aynı şekilde kontrol edilir ve akış devam eder.',
               textAlign: TextAlign.justify,
             ),
           ),

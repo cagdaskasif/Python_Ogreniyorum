@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class dongu1 extends StatelessWidget {
@@ -9,26 +11,33 @@ class dongu1 extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'Şimdi Sıra Sende\n\n   Aşağıdaki örnekleri etkileşimli kabuk (Python Shell-IDLE)  üzerinde'
-                  ' çalıştırıp ekranda gördüğün sonuçları yorumlamalısın.\n\nBu etkinlikte ‘adım’ '
-                  'değişkenine ismini yazmalısın. Çift tırnak “ ” kullanmayı unutma! ',
+              '     Döngüler, istenen kodların belirli sayı veya koşullar sağlandığı sürece tekrar tekrar çalıştırılması temeline dayanır. '
+                  'Burada tekrarlama işlemi belirli sayıda olursa for döngü yapısı, belirli koşullara bağlı tekrar '
+                  'söz konusu ise while döngü yapısı tercih edilir. Örnek verilecek olursa her sabah güneş doğar ve her '
+                  'akşam güneş batar. Bu işlem süreklilik arz etmektedir. ',
               textAlign: TextAlign.justify,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Expanded(
-                child: Container(
-                  padding: EdgeInsets.all(10.0),
-                  margin: EdgeInsets.all(20),
-                  color: Colors.white,
-                  child: Text(
-                    ">>>  adım= “ ………..”\n>>> print ( “Merhaba, ” + adım )",
+          Container(
+            width: (MediaQueryData.fromWindow(window).size.width) * 0.80,
+            child: Column(
+              children: <Widget>[
+                Container(
+                  child: Image.asset(
+                    "assets/images/donguler.png",
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(20),
+            child: Text(
+              '     Yukarıdaki şekilde koşul sağlandığı sürece döngü devam edecektir. Ne zaman ki koşul şartı gerçekleşmezse '
+                  'o durumda döngüden çıkılacaktır.'
+                  '\n\n\n     Python’da while ve for döngüleri olmak üzere iki tür döngü bulunur.',
+              textAlign: TextAlign.justify,
+            ),
           ),
         ],
       ),

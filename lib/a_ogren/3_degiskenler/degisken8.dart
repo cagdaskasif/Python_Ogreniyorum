@@ -9,7 +9,7 @@ class degisken8 extends StatelessWidget {
             margin: EdgeInsets.all(20),
             child: Text(
               'Python dilinde uygun değişken adı örnekleri:',
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.start,
             ),
           ),
           Row(
@@ -21,7 +21,9 @@ class degisken8 extends StatelessWidget {
                   margin: EdgeInsets.all(20),
                   color: Colors.white,
                   child: Text(
-                    "#Uygun değişken isimleri\nsayi1=1\nSayi1=2",
+                    "#Uygun değişken isimleri"
+                        "\nsayi1=1"
+                        "\nSayi1=2",
                   ),
                 ),
               ),
@@ -42,9 +44,13 @@ class degisken8 extends StatelessWidget {
                   padding: EdgeInsets.all(10.0),
                   margin: EdgeInsets.all(20),
                   color: Colors.white,
-                  child: Text("print (sayi1)\nprint(Sayi1)\n#Büyük harf ve küçük harf kullanarak tanımlanan değişkenlerin adı "
-                      "aynı olsa bile\nfarklı değişkenler olduğunu unutulmamalıdır.\nsayı1=3\n#Python değişken adlandırmada "
-                      "Türkçe karakter kullanımına izin vermektedir.\nprint(sayı1)123",
+                  child: Text("print (sayi1)"
+                      "\nprint(Sayi1)"
+                      "\n#Büyük harf ve küçük harf kullanarak tanımlanan değişkenlerin adı aynı olsa bile"
+                      "\nfarklı değişkenler olduğunu unutulmamalıdır."
+                      "\nsayı1=3"
+                      "\n#Python değişken adlandırmada Türkçe karakter kullanımına izin vermektedir."
+                      "\nprint(sayı1)123",
                   ),
                 ),
               ),

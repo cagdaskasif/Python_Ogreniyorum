@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class kosul2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -8,8 +9,18 @@ class kosul2 extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'Basit Dört İşlem',
-              textAlign: TextAlign.start,
+              'Mantıksal İfadeler ve Bağlaçlar',
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(20),
+            child: Text(
+              '     Bir mantıksal ifadeyi diğer mantıksal ifadelerle bağlamanın farklı yolları vardır.\n\n'
+              '     kulaniciAdi==’Admin’ and kullaniciParola==’123456’ Kullanıcı adı ve parola doğru girilirse “True” değeri döndürür.\n\n\n '
+              '     Aşağıdaki örnek kodda kullanıcı adı ve şifresi doğru girilirse ekrana “True” ikisinden biri bile yanlış olursa “False” '
+              'değeri döndürür.',
+              textAlign: TextAlign.justify,
             ),
           ),
           Row(
@@ -21,7 +32,12 @@ class kosul2 extends StatelessWidget {
                   margin: EdgeInsets.all(20),
                   color: Colors.white,
                   child: Text(
-                    ">>> 4+2\n6\n>>> 4-2\n2\n>>> 4*2\n8\n>>> 4/2\n2.0",
+                    "kullaniciAdi=input('Kullanıcı Adı:')"
+                    "\nkullaniciParola=input('Parola:')"
+                    "\nprint(kullaniciAdi=='Admin' and kullaniciParola=='123456')"
+                    "\nKullanıcı Adı:Admin"
+                    "\nParola:123456"
+                    "\nTrue",
                   ),
                 ),
               ),
@@ -30,8 +46,7 @@ class kosul2 extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(20),
             child: Text(
-              'İPUCU: Bu örnekte Python Shell üzerinde basit dört '
-                  'işlem örneği yaptık. Bu işlemlerde ( +, -, *, /) operatörlerini kullandık.',
+              '',
               textAlign: TextAlign.justify,
               style: TextStyle(color: Colors.blueGrey.shade700),
             ),
